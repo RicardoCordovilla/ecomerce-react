@@ -1,0 +1,409 @@
+:root {
+  --fondo: #fff;
+  --naranja: #df7356;
+  --blanco: #fff;
+  --celeste: #a0c0d6;
+  --azul: #425a7d;
+  --shadow-defautl: #112040;
+  font-family: 'Lato', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+img {
+  width: 100%;
+}
+
+input {
+  outline: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  background: var(--fondo);
+}
+
+span {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 1em;
+  background-color: #334;
+  box-shadow: 0 0 5px 1px #112040;
+  margin-bottom: 2em;
+}
+
+.header__logo{
+  padding: 3px 6px;
+  color: #777;
+  border-radius: 8px;
+}
+
+.header__nav{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #334,#425a7d);
+  color: #fff;
+  margin-left: 1em;
+  padding: 1em;
+  border-radius: 3px;
+}
+
+.header__list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+
+.header__item{
+  width: 100%;
+}
+.home {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  background: var(--fondo);
+
+}
+
+
+.active-link {
+  background-color: #aaa;
+  padding: 0.5em 1em;
+  text-align: left;
+  width: 100%;
+}
+
+
+.loginForm{
+  max-width: 400px;
+  background: #aaa;
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 0 0 5px 2px #334;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: auto;
+}
+
+
+.loginForm label{
+  margin-bottom: -1em;
+  color: #edf;
+}
+.loginForm input{
+  font-size: 1.1rem;
+  width: 100%;
+  padding: 3px 6px;
+}
+
+.cardProduct {
+  position: relative;
+  width: 200px;
+  height: 350px;
+  border-radius: 8px;
+  background: var(--blanco);
+  box-shadow: 0 0 5px 1px var(--shadow-defautl);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 1em;
+}
+
+.btnlogin{
+  background-color: #2f5;
+  border-radius: 32px;
+  border: 0;
+  padding: 1em;
+}
+
+.cardProduct__infoBx {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.cardProduct__imgBx {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardProduct__img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.productInfo__body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.priceBuy {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.cardProduct__price::before {
+  content: '$';
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1em;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+
+}
+
+
+.ctaAdd {
+  margin: 1em;
+  background: rgb(88, 205, 35);
+  border: 1px solid transparent;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--fondo);
+  transition: box-shadow 250ms ease;
+}
+
+.ctaBuy {
+  margin: 1em;
+  /* width: 50%; */
+  background: rgb(51, 80, 211);
+  border: 1px solid transparent;
+  padding: 0.2em 0.5em;
+  font-size: 1.5em;
+  border-radius: 8px;
+  font-weight: 500;
+  color: var(--fondo);
+
+}
+
+.productDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+
+}
+
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1em;
+}
+
+.productInfoBx {
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.productInfo__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.productInfo__name{
+  margin-bottom: 0.5em;
+}
+
+.productInfo__desctription{
+  color: #334;
+}
+.similarProducts {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 2px solid #aaa;
+}
+.similarProducts h2{
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+}
+.similarProductsBx {
+  padding: 1em 1.5em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+
+.cart{
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+}
+
+.bodyCart{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.cartFooter{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: flex-end;
+  padding: 1em 2em;
+}
+
+.btn:hover{
+  box-shadow: 0 0 15px 4px #11f;
+  transition: box-shadow 200ms ease;
+}
+.btn{
+  cursor: pointer;
+  box-shadow: 0 0 10px 2px #334;
+  transition: box-shadow 500ms ease;
+}
+  
+.btnCheckout{
+  background-color: #2f5;
+  font-size: 2rem;
+  width: 100%;
+  border: 0;
+  padding: 0.5em;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 32PX;
+  margin-top: 1em;
+  cursor: pointer;
+
+}
+
+
+
+.articleCard{
+  position: relative;
+  border-top: 1px solid #aaa ;
+  border-bottom: 1px solid #aaa ;
+  padding: 0.5em 1em;
+  margin-bottom: 1em;
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.articleCard h3{
+  color: #888;
+  font-weight: 100;
+}
+
+.articleCard .btnTrash{
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  color: #f55;
+  font-weight: 700;
+  border: 0;
+  background: var(--celeste);
+  padding: 0.3em 0.6em;
+  border-radius: 5px;
+}
+
+
+.cartFooter{
+  /* position: absolute; */
+  bottom: 0;
+
+}
+
+.purchaseCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2em;
+  border-top: 1px solid #334;
+  border-bottom: 1px solid #334;
+  padding: 1em;
+  gap: 0.5em;
+}
+
+.purchaseBody h3{
+  color: #777;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}

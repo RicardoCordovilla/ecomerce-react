@@ -46,6 +46,7 @@ const Cart = () => {
         axios.post(url, body, getConfig())
             .then(res => {
                 console.log(res.data)
+                setTotalValue(0)
                 getAllproducts()
             })
             .catch(err => console.log(err))

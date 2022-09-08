@@ -1,10 +1,13 @@
 import axios from 'axios'
-import React from 'react'
+import React, { useState } from 'react'
 import getConfig from '../../utils/getConfig'
 
 const ProductsCart = ({ articleInfo, getAllproducts }) => {
 
+  const [hide, setHide] = useState(true)
+
   const handleTrash = () => {
+    setHide(false)
     const url = `https://ecommerce-api-react.herokuapp.com/api/v1/cart/${articleInfo.id}`
     axios.delete(url, getConfig())
       .then(() => getAllproducts())
@@ -13,13 +16,15 @@ const ProductsCart = ({ articleInfo, getAllproducts }) => {
 
 
   return (
-    <div className="cart">
-      <article className='articleCard'>
-        <h3>Brand: {articleInfo.brand}</h3>
-        <p>Article: {articleInfo.title}</p>
-        <p>Quantity: {articleInfo.productsInCart.quantity}</p>
-        <button className='btnTrash btn' onClick={handleTrash}>Trash</button>
-      </article>
+    <div className={hide?'box':'hide'}>
+      <div className="cart">
+        <article className='articleCard'>
+          <h3>Brand: {articleInfo.brand}</h3>
+          <p>Article: {articleInfo.title}</p>
+          <p>Quantity: {articleInfo.productsInCart.quantity}</p>
+          <button className='btnTrash btn' onClick={handleTrash}>Trash</button>
+        </article>
+      </div>
     </div>
   )
 }

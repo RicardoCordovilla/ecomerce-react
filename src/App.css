@@ -57,7 +57,11 @@ span {
   font-weight: 700;
 }
 
-.header{
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -67,23 +71,23 @@ span {
   margin-bottom: 2em;
 }
 
-.header__logo{
+.header__logo {
   padding: 3px 6px;
   color: #777;
   border-radius: 8px;
 }
 
-.header__nav{
+.header__nav {
   height: 100%;
   width: 100%;
-  background: linear-gradient(to right, #334,#425a7d);
+  background: linear-gradient(to right, #334, #425a7d);
   color: #fff;
   margin-left: 1em;
   padding: 1em;
   border-radius: 3px;
 }
 
-.header__list{
+.header__list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -93,10 +97,13 @@ span {
 }
 
 
-.header__item{
+.header__item {
   width: 100%;
 }
+
 .home {
+  position: relative;
+  margin-top: 170px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -115,8 +122,11 @@ span {
   width: 100%;
 }
 
+.login {
+  padding: 0 1em;
+}
 
-.loginForm{
+.loginForm {
   max-width: 400px;
   background: #aaa;
   border-radius: 8px;
@@ -126,17 +136,20 @@ span {
   flex-direction: column;
   gap: 1em;
   margin: auto;
+  margin-top: 170px;
 }
 
 
-.loginForm label{
+.loginForm label {
   margin-bottom: -1em;
   color: #edf;
 }
-.loginForm input{
+
+.loginForm input {
   font-size: 1.1rem;
   width: 100%;
   padding: 3px 6px;
+
 }
 
 .cardProduct {
@@ -153,7 +166,7 @@ span {
   padding: 0 1em;
 }
 
-.btnlogin{
+.btnlogin {
   background-color: #2f5;
   border-radius: 32px;
   border: 0;
@@ -270,24 +283,27 @@ span {
   object-fit: contain;
 }
 
-.productInfo__name{
+.productInfo__name {
   margin-bottom: 0.5em;
 }
 
-.productInfo__desctription{
+.productInfo__desctription {
   color: #334;
 }
+
 .similarProducts {
   margin-top: 2em;
   padding-top: 1em;
   border-top: 2px solid #aaa;
 }
-.similarProducts h2{
+
+.similarProducts h2 {
   text-align: center;
   margin-top: 1em;
   margin-bottom: 1em;
 
 }
+
 .similarProductsBx {
   padding: 1em 1.5em;
   display: flex;
@@ -298,19 +314,19 @@ span {
 }
 
 
-.cart{
-  /* position: relative; */
+.cart {
   display: flex;
   flex-direction: column;
+  margin-top: 170px;
 }
 
-.bodyCart{
+.bodyCart {
   display: flex;
   flex-direction: column;
 
 }
 
-.cartFooter{
+.cartFooter {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -318,17 +334,18 @@ span {
   padding: 1em 2em;
 }
 
-.btn:hover{
+.btn:hover {
   box-shadow: 0 0 15px 4px #11f;
   transition: box-shadow 200ms ease;
 }
-.btn{
+
+.btn {
   cursor: pointer;
   box-shadow: 0 0 10px 2px #334;
   transition: box-shadow 500ms ease;
 }
-  
-.btnCheckout{
+
+.btnCheckout {
   background-color: #2f5;
   font-size: 2rem;
   width: 100%;
@@ -344,10 +361,10 @@ span {
 
 
 
-.articleCard{
+.articleCard {
   position: relative;
-  border-top: 1px solid #aaa ;
-  border-bottom: 1px solid #aaa ;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
   padding: 0.5em 1em;
   margin-bottom: 1em;
   background: #eee;
@@ -356,12 +373,12 @@ span {
   gap: 0.5em;
 }
 
-.articleCard h3{
+.articleCard h3 {
   color: #888;
   font-weight: 100;
 }
 
-.articleCard .btnTrash{
+.articleCard .btnTrash {
   position: absolute;
   right: 5px;
   bottom: 5px;
@@ -374,13 +391,13 @@ span {
 }
 
 
-.cartFooter{
+.cartFooter {
   /* position: absolute; */
   bottom: 0;
 
 }
 
-.purchaseCard{
+.purchaseCard {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -390,11 +407,13 @@ span {
   border-bottom: 1px solid #334;
   padding: 1em;
   gap: 0.5em;
+  margin-top: 170px;
 }
 
-.purchaseBody h3{
+.purchaseBody h3 {
   color: #777;
 }
+
 table {
   border-collapse: collapse;
   width: 100%;
@@ -410,11 +429,12 @@ tr:nth-child(even) {
   background-color: #ddd;
 }
 
-.box{
+.box {
   transform: scale(1);
   transition: transform 300ms ease;
 }
-.hide{
+
+.hide {
   transform: scale(0);
-  transition: transform 400ms ease;
+  transition: transform 600ms ease;
 }

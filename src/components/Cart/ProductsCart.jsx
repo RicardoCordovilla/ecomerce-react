@@ -17,7 +17,7 @@ const ProductsCart = ({ articleInfo, getAllproducts }) => {
 
   return (
     <div className={hide?'box':'hide'}>
-      <div className="cart">
+      <div className="carts">
         <article className='articleCard'>
           <h3>Brand: {articleInfo.brand}</h3>
           <p>Article: {articleInfo.title}</p>
